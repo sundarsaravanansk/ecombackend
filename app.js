@@ -9,6 +9,10 @@ dontenv.config({path: path.join(__dirname, 'config', 'config.env')})
 
 connectDatabase();
 
+app.get("/" , (req , res )=>{
+    res.json({message : "hello backend"})
+})
+
 app.use(express.json())
 app.use('/' , products)
 app.use('/', orders)
